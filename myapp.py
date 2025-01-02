@@ -12,7 +12,8 @@ from typing import List,Dict
 import streamlit as st
 import os
 from crewai_tools import PDFSearchTool
-
+import chromadb
+chromadb.api.client.SharedSystemClient.clear_system_cache()
 
 from dotenv import load_dotenv
 load_dotenv()
