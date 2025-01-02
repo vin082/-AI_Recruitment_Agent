@@ -1,0 +1,10 @@
+openai
+python-dotenv
+crewai
+crewai-tools
+PyPDF2
+spacy
+langchain-openai
+python-docx
+streamlit
+pdfplumber
