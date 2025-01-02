@@ -9,3 +9,4 @@ python-docx
 streamlit
 pdfplumber
 chromadb>=0.4.0
+sqlite-utils>=3.35
