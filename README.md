@@ -1,0 +1,1 @@
+This application is about matching the candidates profile for the recruitment using AI Agents.
