@@ -8,3 +8,4 @@ langchain-openai
 python-docx
 streamlit
 pdfplumber
+chromadb>=0.4.0
