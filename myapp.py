@@ -14,9 +14,12 @@ from crewai_tools import PDFSearchTool
 from dotenv import load_dotenv
 load_dotenv()
 
+
+
 #LOAD OPENAI KEY
+openai_api_key = os.getenv("OPENAI_API_KEY")
 #os.environ["OPENAI_API_KEY"]=os.getenv("OPENAI_API_KEY")
-OPENAI_API_KEY='Your API Key'
+#OPENAI_API_KEY='Your API Key'
 pdftool=PDFSearchTool()
 #Add a sample job desription
 
