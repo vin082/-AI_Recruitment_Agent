@@ -158,11 +158,13 @@ def process_multiple_resumes(files, job_keywords):
 st.header("Multiple Resume Job Matching System")
 
 openai_api_key = st.text_input("OpenAI API Key:", type="password")
-if not openai_api_key:
+serper_api_key = st.text_input("SerperDev API Key:", type="password")
+
+if not (openai_api_key and serper_api_key):
     st.warning("Please enter OpenAI API key.")
     st.stop()
 
-os.environ["OPENAI_API_KEY"] = openai_api_key
+#os.environ["OPENAI_API_KEY"] = openai_api_key
 
 job_keywords = st.text_input("Enter job search keywords (e.g., 'Python Developer New York'):")
 resumes = st.file_uploader("Upload Resumes (PDF)", type="pdf", accept_multiple_files=True)
