@@ -15,12 +15,14 @@ load_dotenv()
 # Initialize tools
 pdftool = PDFSearchTool()
 serper_tool = SerperDevTool()
-try:
-    serper_tool = SerperDevTool(api_key=os.getenv("SERPER_API_KEY"))
-    tools=[serper_tool]
-    st.success("SerperDevTool initialized successfully!")
-except Exception as e:
-    st.error(f"Failed to initialize SerperDevTool: {e}")
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+serper_api_key = st.secrets["SERPER_API_KEY"]
+#try:
+    #serper_tool = SerperDevTool(api_key=os.getenv("SERPER_API_KEY"))
+    #tools=[serper_tool]
+    #st.success("SerperDevTool initialized successfully!")
+#except Exception as e:
+    #st.error(f"Failed to initialize SerperDevTool: {e}")
 
 def create_agents():
     parser_agent = Agent(
